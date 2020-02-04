@@ -3,6 +3,7 @@
 - Create your own react project
 - Identify and describe the project structure
 - Describe stateful and stateless components
+- Create your own stateful and stateless components
 
 ## Creating your react project
 
