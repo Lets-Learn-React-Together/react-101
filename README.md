@@ -90,7 +90,38 @@ this.state.name = 'Brooks'
 
 Why can't you just create an object to store state information in a 'dumb' component? There's some magic behind the `setState` method. Each time state is updated, it triggers a rerender. If you were to try and create state with an object, it wouldn't trigger a rerender and the view would never change. This also important to note because if you update state automatically from the render method you'll be stuck in a never ending loop.
 
+#### Props
+Props are properties passed from a parent component to a child component. 
 
+```js
+// Parent Component
 
+class ParentComponent{
+    constructor(props) {
+        super Props)
+        this.state = {...}
+    }
 
+    render() => {
+        return(
+            <ChildComponent
+                name={this.state.name}
+                age={this.state.age}
+                addressList={[this.state.shippingAddress, this.state.billingAddress]}
+                nickname = {this.state.nickname || 'No nickname'}
+            />
+        )
+    }
+}
 
+//Child Component
+
+const ChildComponent = props => (
+    <>
+        <h1>{props.name}<h1>
+        <h2>{props.nickname}</h2>
+        <h3>{props.age}</h3>
+        {props.addressList.map(a => <p>{a}</p>)}
+    </>
+)
+```
