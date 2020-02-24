@@ -3,6 +3,7 @@
 - Create your own react project
 - Identify and describe the project structure
 - Describe stateful and stateless components
+- Create your own stateful and stateless components
 
 ## Creating your react project
 
@@ -125,3 +126,13 @@ const ChildComponent = props => (
     </>
 )
 ```
+
+**note:** if you're using a class component don't forget to use `this.props` instead of `props`
+
+## Tools
+VS Code offers a very helpful extension when developing React apps. Select the extensions tab (4 squares icon). Type in 'es7' and install the `ES7 React/Redux/GraphQL/React-Native snippets` extension.
+
+`rfc <tab>` - create a React function component
+`rcc <tab>` - create a React class component
+`clg <tab>` - console.log shortcut
+`sst <tab>` - create a setState invocation
